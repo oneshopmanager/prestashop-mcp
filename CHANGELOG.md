@@ -2,8 +2,9 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
-## Unreleased
+## 0.4.56 — 2026-10-14
 
+- Claude Desktop extension `prestashop-mcp.mcpb` 1.0.0, in the [Releases](https://github.com/oneshopmanager/prestashop-mcp/releases): a relay from Claude to the One Shop Manager already installed on the computer. It does not contain the software.
 - New tools: `search_customers`, `get_customer` (read) and `propose_order_create` (proposal: a new order for an existing customer; a created order cannot be undone from the journal).
 
 ## 0.4.55 — 2026-10-14

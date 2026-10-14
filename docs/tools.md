@@ -1,6 +1,6 @@
 # MCP tools
 
-Tools exposed by the `one-shop-manager` MCP server, version 0.4.55. Source of truth: `tools/list` on the server.
+Tools exposed by the `one-shop-manager` MCP server, version 0.4.56. Source of truth: `tools/list` on the server.
 
 - **Read**: returns data from the local copy of the store (a few tools read the store directly, as noted). Nothing is modified.
 - **Propose**: computes the change and files it as a proposal in the AI log of the application. **It writes nothing to the store.** The user opens the before/after preview and clicks Apply; applied changes can be undone from the journal, except created orders.

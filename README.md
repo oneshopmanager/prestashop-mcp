@@ -46,7 +46,7 @@ A **read-only** mode hides all proposal tools from the AI.
 1. Download the 14-day free trial from [oneshopmanager.com](https://oneshopmanager.com/en/) and connect your store.
 2. In the application: **Settings › AI settings**, card **AI access (MCP)**: check **Enable AI access**, then click **Test access**.
 3. Connect your client:
-   - [Claude Desktop](docs/clients/claude-desktop.md): one button, **Connect Claude Desktop**
+   - [Claude Desktop](docs/clients/claude-desktop.md): one button, **Connect Claude Desktop**, or the extension `prestashop-mcp.mcpb` from the [Releases](https://github.com/oneshopmanager/prestashop-mcp/releases)
    - [Claude Code](docs/clients/claude-code.md): one command to paste
    - [Cursor](docs/clients/cursor.md)
    - [Other MCP clients](docs/clients/other-clients.md), including Codex

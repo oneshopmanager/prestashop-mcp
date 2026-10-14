@@ -1,0 +1,72 @@
+{
+  "manifest_version": "0.3",
+  "name": "prestashop-mcp",
+  "display_name": "One Shop Manager for PrestaShop",
+  "version": "1.0.0",
+  "description": "PrestaShop 1.6 to 9: Claude reads your catalog, stock, orders and accounting, and prepares changes you approve.",
+  "long_description": "Connects Claude to One Shop Manager, the desktop application for PrestaShop 1.6 to 9 (macOS and Windows), already installed on this computer. The application copies the store locally and runs a local MCP server; this extension relays Claude to it. Read tools answer from the local copy. Proposal tools never write to the store: each change waits in the AI log of the application until you open the before/after preview and apply it, and can be undone from the journal. Requires One Shop Manager (14-day free trial) with AI access enabled in Settings › AI settings.",
+  "author": {
+    "name": "One Shop Manager",
+    "email": "contact@oneshopmanager.com",
+    "url": "https://oneshopmanager.com"
+  },
+  "homepage": "https://oneshopmanager.com/claude-prestashop",
+  "documentation": "https://github.com/oneshopmanager/prestashop-mcp",
+  "support": "https://github.com/oneshopmanager/prestashop-mcp/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oneshopmanager/prestashop-mcp"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "OSM_ACCESS_KEY": "${user_config.access_key}",
+        "OSM_PORT": "${user_config.port}"
+      }
+    }
+  },
+  "user_config": {
+    "access_key": {
+      "type": "string",
+      "title": "Access key",
+      "description": "In One Shop Manager: Settings › AI settings › AI access (MCP), choose Claude Code and copy the key after « Bearer ».",
+      "sensitive": true,
+      "required": true
+    },
+    "port": {
+      "type": "number",
+      "title": "Port",
+      "description": "Port of the AI access, 47715 unless you changed it in the application.",
+      "default": 47715,
+      "min": 1024,
+      "max": 65535,
+      "required": false
+    }
+  },
+  "tools": [],
+  "keywords": [
+    "prestashop",
+    "ecommerce",
+    "catalog",
+    "orders",
+    "accounting",
+    "seo"
+  ],
+  "license": "CC-BY-4.0",
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}

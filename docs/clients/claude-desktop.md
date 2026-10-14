@@ -15,6 +15,15 @@ In a new conversation, click **+** › **Connectors**: `one-shop-manager` is lis
 
 The application shows a warning if Claude Desktop is connected with an old access key or another location of the application: quit Claude, click **Connect Claude Desktop** again, then reopen Claude.
 
+## Install as an extension
+
+Instead of the button, you can install the extension `prestashop-mcp.mcpb` from the [Releases](https://github.com/oneshopmanager/prestashop-mcp/releases) of this repository: open the file, or drag it into **Settings › Extensions** in Claude Desktop. It asks for:
+
+- **Access key**: in One Shop Manager, **Settings › AI settings**, card **AI access (MCP)**, choose **Claude Code** and copy the key after `Bearer`.
+- **Port**: 47715, unless you changed it in the application.
+
+The extension is a small relay (source in [`mcpb/`](../../mcpb)) between Claude and the One Shop Manager already installed on the computer; it does not contain the software. One Shop Manager must be open, with AI access enabled. After **New token** in the application, update the key in the extension settings.
+
 ## Manual setup
 
 If the button fails: in Claude, **Settings › Developer › Edit config**, then open `claude_desktop_config.json`. If the file is empty, paste the block that the application shows under **Manual setup**:

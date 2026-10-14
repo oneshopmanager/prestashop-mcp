@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.oneshopmanager/prestashop-mcp",
+  "title": "One Shop Manager for PrestaShop",
+  "description": "PrestaShop 1.6 to 9: catalog, stock, orders, accounting; changes wait for your approval.",
+  "websiteUrl": "https://oneshopmanager.com/claude-prestashop",
+  "repository": {
+    "url": "https://github.com/oneshopmanager/prestashop-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/oneshopmanager/prestashop-mcp/releases/download/v1.0.0/prestashop-mcp.mcpb",
+      "fileSha256": "38575cfb155a7fb9f9ec91daf0fe47d38c403da97b8a1fb34cc3c31b312a01ff",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
