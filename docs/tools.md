@@ -21,9 +21,9 @@ In **read-only** mode, the server hides every Propose tool, `save_table` and `li
 
 | Tool | What it does | Type |
 | --- | --- | --- |
-| `search_products` | Search products: quick checks (out of stock, below cost, no EAN, no image…), advanced filters, sorting, pagination. Returns price excl./incl. tax, cost price, margin, stock, EAN, active | Read |
-| `get_product` | Product details, categories and change history | Read |
-| `get_product_texts` | Product texts per language: name, short description, meta title and description, friendly URL | Read |
+| `search_products` | Search products: quick checks (out of stock, below cost, no EAN, no image…), advanced filters, sorting (by id for the latest added, by last update, price, stock…), pagination. Returns price excl./incl. tax, cost price, margin, stock, EAN, active | Read |
+| `get_product` | Product details, categories and change history; by id, reference, EAN or name | Read |
+| `get_product_texts` | Product texts per language: name, short description, meta title and description, friendly URL; by id, reference, EAN or name | Read |
 | `list_categories` | Category tree: id, parent, name, depth, active, position, number of products | Read |
 | `get_category_texts` | Category texts per language: description, meta tags, friendly URL | Read |
 | `list_attributes` | Combination attributes (size, color…) and their values, with usage count | Read |

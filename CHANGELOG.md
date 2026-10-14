@@ -2,6 +2,11 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
+## Unreleased
+
+- `get_product`, `get_product_texts`: the product can be given by its reference, EAN or name instead of its id (several matches: the list of candidates is returned).
+- `search_products`: sort by last update (`dateUpd`); the description says that sorting by `id` descending gives the latest added products.
+
 ## 0.4.56 — 2026-10-14
 
 - Claude Desktop extension `prestashop-mcp.mcpb` 1.0.0, in the [Releases](https://github.com/oneshopmanager/prestashop-mcp/releases): a relay from Claude to the One Shop Manager already installed on the computer. It does not contain the software.
