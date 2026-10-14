@@ -27,6 +27,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | `list_categories` | Category tree: id, parent, name, depth, active, position, number of products | Read |
 | `get_category_texts` | Category texts per language: description, meta tags, friendly URL | Read |
 | `list_attributes` | Combination attributes (size, color…) and their values, with usage count | Read |
+| `list_features` | Product features (Material, Dimensions…) read from the shop: predefined values and custom texts with product counts; optionally the features of one product | Read |
 | `list_combinations` | Product combinations, read from the store: label, reference, EAN, price impact, final price, stock, default | Read |
 
 ## Customers
@@ -99,6 +100,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | Tool | What it does | Type |
 | --- | --- | --- |
 | `propose_attribute_group` | New attribute (Material, Shoe size…), color or not | Propose |
+| `propose_feature_edit` | Create, rename, merge, reorder or delete features and values, turn custom texts into a predefined value, assign a value to products (set, add, remove) | Propose |
 | `propose_attribute_edit` | Rename, reorder or move attribute values to another attribute, merge a value into another (combinations rewritten, clashes refused), rename or reorder attributes, delete unused values or attributes | Propose |
 | `propose_attribute_values` | New values for an attribute; existing values are skipped | Propose |
 | `propose_combinations_create` | Add combinations to an existing product | Propose |
