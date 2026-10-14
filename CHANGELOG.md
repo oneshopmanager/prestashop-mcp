@@ -6,6 +6,7 @@ Changes to the MCP server of One Shop Manager. The server version is the applica
 
 - New tool `propose_attribute_edit` (proposal): rename, reorder, move or merge attribute values, rename or reorder attributes, delete unused values or attributes.
 - New tools `list_features` (read) and `propose_feature_edit` (proposal): product features and their values; rename, merge, reorder, delete, turn custom texts into a predefined value, assign to products.
+- New tools `list_promotions` (read), `propose_promotion` and `propose_campaign_edit` (proposals): promotion campaigns with specific prices; create, remove, change dates, duplicate.
 
 ## 0.4.62 — 2026-10-14
 

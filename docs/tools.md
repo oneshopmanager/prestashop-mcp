@@ -28,6 +28,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | `get_category_texts` | Category texts per language: description, meta tags, friendly URL | Read |
 | `list_attributes` | Combination attributes (size, color…) and their values, with usage count | Read |
 | `list_features` | Product features (Material, Dimensions…) read from the shop: predefined values and custom texts with product counts; optionally the features of one product | Read |
+| `list_promotions` | Promotion campaigns (specific prices): name, product count, dates, groups and countries; optionally the products of one campaign with their sale price | Read |
 | `list_combinations` | Product combinations, read from the store: label, reference, EAN, price impact, final price, stock, default | Read |
 
 ## Customers
@@ -81,6 +82,8 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | Tool | What it does | Type |
 | --- | --- | --- |
 | `propose_cell_edits` | Exact values product by product: price excl./incl. tax, cost price, stock, EAN, reference, active, name, order of products in a category (position) | Propose |
+| `propose_promotion` | New promotion campaign: one specific price per product, percentage or amount incl. tax, dates, customer group, country, minimum quantity, rounding (x.90, x.99), floor at cost price; warns on overlaps | Propose |
+| `propose_campaign_edit` | Remove a campaign, change its dates, or duplicate it with new dates | Propose |
 | `propose_price_change` | Price change on several products: percentage, amount or fixed price, rounding, minimum margin; warns below cost, blocks zero prices | Propose |
 | `propose_field_change` | Enable or disable, set or adjust stock, or set a field value on several products | Propose |
 | `propose_product_categories` | Categories of several products: add, remove, replace (move), new default category | Propose |
@@ -117,4 +120,4 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 
 ## Not available to the AI yet
 
-Creating or editing customers; promotions, vouchers and specific prices; photos of an existing product; suppliers, SEO redirects and image captions. These are done in the application.
+Creating or editing customers; vouchers (cart rules); photos of an existing product; suppliers, SEO redirects and image captions. These are done in the application.
