@@ -13,11 +13,21 @@ Command: the One Shop Manager executable, with the arguments `--mcp <ACCESS_KEY>
 
 The address, the access key and the executable path are shown in **Settings › AI settings**, card **AI access (MCP)**.
 
-## Codex (ChatGPT)
+## ChatGPT desktop app and Codex
 
-ChatGPT in the browser cannot reach a server on your computer: use Codex (app, editor extension or terminal). In One Shop Manager, choose **ChatGPT (Codex)**, click **Connect Codex**, then restart Codex. The button adds (or replaces) the `one-shop-manager` server in `~/.codex/config.toml` (Windows: `%USERPROFILE%\.codex\config.toml`; `$CODEX_HOME` if set) and keeps the rest of the file.
+ChatGPT in the browser cannot reach a server on your computer. The ChatGPT desktop app (Mac, Windows) and Codex (app, editor extension or terminal) can.
 
-Manual method: add this block, shown by the application, at the end of the same file:
+In One Shop Manager, choose **ChatGPT (Codex)** and click **Connect ChatGPT and Codex**. The button keeps the rest of each file and writes:
+
+- a local plugin in `~/.agents/plugins/one-shop-manager`, listed in the personal marketplace `~/.agents/plugins/marketplace.json`, for the ChatGPT desktop app;
+- the `one-shop-manager` server in `~/.codex/config.toml` (`$CODEX_HOME` if set), for Codex.
+
+Then:
+
+- **ChatGPT desktop app**: quit and reopen it, open **Plugins**, choose the « Plugins locaux » marketplace and install **One Shop Manager** (once).
+- **Codex**: restart it.
+
+Manual method for Codex: add this block, shown by the application, at the end of `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.one-shop-manager]
