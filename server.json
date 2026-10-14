@@ -13,7 +13,7 @@
     {
       "registryType": "mcpb",
       "identifier": "https://github.com/oneshopmanager/prestashop-mcp/releases/download/v1.0.0/prestashop-mcp.mcpb",
-      "fileSha256": "38575cfb155a7fb9f9ec91daf0fe47d38c403da97b8a1fb34cc3c31b312a01ff",
+      "fileSha256": "0855ce23bc629654e8b2dd8d348d76e44b1ba57b85f35ffbc285f75b40530d3f",
       "transport": {
         "type": "stdio"
       }
