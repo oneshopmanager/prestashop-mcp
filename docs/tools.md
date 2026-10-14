@@ -33,7 +33,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table` and `li
 
 | Tool | What it does | Type |
 | --- | --- | --- |
-| `search_customers` | Search active customers by name, email or company (20 results at most) | Read |
+| `search_customers` | Search active customers by name, email or company (20 results at most; empty: the 6 latest buyers), with company, order count, total spent and last order | Read |
 | `get_customer` | Customer details, read from the store: groups, addresses, orders, total spent, note | Read |
 
 ## Orders
