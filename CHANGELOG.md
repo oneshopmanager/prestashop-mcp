@@ -2,6 +2,10 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
+## Unreleased
+
+- New tools `get_accounting_plan` (read) and `set_accounting_plan` (local write): read and change the chart of accounts and the account labels of the application, in the CSV format of the plan export. Hidden in read-only mode.
+
 ## 0.4.61 — 2026-10-14
 
 - New tool `propose_product_categories` (proposal): add products to categories, remove them, or move them (replace), and change their default category.

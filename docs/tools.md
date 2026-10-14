@@ -8,7 +8,7 @@ Tools exposed by the `one-shop-manager` MCP server, version 0.4.56. Source of tr
 
 Every `propose_*` tool takes a `reason` argument: why the change is suggested, shown to the user next to the proposal.
 
-In **read-only** mode, the server hides every Propose tool, `save_table` and `list_proposals`.
+In **read-only** mode, the server hides every Propose tool, `save_table`, `set_accounting_plan` and `list_proposals`.
 
 ## Store
 
@@ -63,6 +63,8 @@ In **read-only** mode, the server hides every Propose tool, `save_table` and `li
 | --- | --- | --- |
 | `accounting_summary` | Period summary with the chart of accounts set in the application: journal totals and balance, VAT by country and rate, items to check | Read |
 | `accounting_documents` | Invoices or credit slips of a period, with the reasons to check each document | Read |
+| `get_accounting_plan` | The chart of accounts set in the application, as CSV (`type;pays;critere;compte`): journals, accounts by VAT rate and country, payment methods, custom account labels | Read |
+| `set_accounting_plan` | Changes the chart of accounts or account labels (same CSV, partial). Saved at once on this computer; returns the previous chart. Nothing is sent to the store | Local |
 | `accounting_order` | Accounting for one order: sales and payment entries, anomalies (unbalanced, VAT, country), invoices and credit slips | Read |
 
 ## Journal
