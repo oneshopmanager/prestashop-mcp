@@ -15,11 +15,13 @@ The address, the access key and the executable path are shown in **Settings › 
 
 ## Codex (ChatGPT)
 
-ChatGPT in the browser cannot reach a server on your computer: use Codex (app, editor extension or terminal). In One Shop Manager, choose **ChatGPT (Codex)**, then add the block shown by the application at the end of `~/.codex/config.toml` (Windows: `%USERPROFILE%\.codex\config.toml`) and restart Codex:
+ChatGPT in the browser cannot reach a server on your computer: use Codex (app, editor extension or terminal). In One Shop Manager, choose **ChatGPT (Codex)**, click **Connect Codex**, then restart Codex. The button adds (or replaces) the `one-shop-manager` server in `~/.codex/config.toml` (Windows: `%USERPROFILE%\.codex\config.toml`; `$CODEX_HOME` if set) and keeps the rest of the file.
+
+Manual method: add this block, shown by the application, at the end of the same file:
 
 ```toml
 [mcp_servers.one-shop-manager]
-command = '<path to the One Shop Manager executable>'
+command = "<path to the One Shop Manager executable>"
 args = ["--mcp", "<ACCESS_KEY>"]
 ```
 

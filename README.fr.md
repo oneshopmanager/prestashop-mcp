@@ -46,7 +46,7 @@ Le mode **lecture seule** masque à l'IA tous les outils de proposition.
 1. Téléchargez l'essai gratuit de 14 jours sur [oneshopmanager.com](https://oneshopmanager.com/) et connectez votre boutique.
 2. Dans l'application : **Configuration › Configuration IA**, carte **Accès IA (MCP)** : cochez **Activer l'accès IA**, puis cliquez sur **Tester l'accès**.
 3. Branchez votre client :
-   - [Claude Desktop](docs/clients/claude-desktop.md) : un bouton, **Brancher Claude Desktop**, ou l'extension `prestashop-mcp.mcpb` des [Releases](https://github.com/oneshopmanager/prestashop-mcp/releases), ou l'extension `prestashop-mcp.mcpb` des [Releases](https://github.com/oneshopmanager/prestashop-mcp/releases)
+   - [Claude Desktop](docs/clients/claude-desktop.md) : un bouton, **Brancher Claude Desktop**, ou l'extension `prestashop-mcp.mcpb` des [Releases](https://github.com/oneshopmanager/prestashop-mcp/releases)
    - [Claude Code](docs/clients/claude-code.md) : une commande à coller
    - [Cursor](docs/clients/cursor.md)
    - [Autres clients MCP](docs/clients/other-clients.md), dont Codex
