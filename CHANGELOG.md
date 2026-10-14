@@ -2,6 +2,10 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
+## Unreleased
+
+- New tool `propose_product_categories` (proposal): add products to categories, remove them, or move them (replace), and change their default category.
+
 ## 0.4.60 — 2026-10-14
 
 - `search_customers`: each result also gives the company, order count, total spent and last order date; an empty search returns the 6 latest buyers.
