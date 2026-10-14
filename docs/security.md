@@ -12,7 +12,7 @@
 
 - **Nothing is applied without your approval.** The AI never writes to the store itself: `propose_*` tools file proposals in **AI assistant › AI log**.
 - Each proposal opens in the usual preview: before/after line by line, with warnings (negative price, duplicate EAN, change over 50%). You apply, adjust or reject it. Unprocessed proposals expire after 7 days.
-- **Everything can be undone** from the journal, like an operation done by hand.
+- **Everything can be undone** from the journal, like an operation done by hand. Exception: an order created by the AI cannot be undone from the journal.
 
 ## Your data
 

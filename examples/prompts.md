@@ -26,10 +26,12 @@ Requests that work with the One Shop Manager MCP server. Changes are filed as pr
 - "Add the S, M, L and XL combinations to this sweatshirt."
 - "Fill in the EANs of these combinations."
 
-## Orders
+## Orders and customers
 
 - "Which paid orders have not shipped yet?"
 - "Here are today's tracking numbers: … Set the orders to Shipped and email the customers."
+- "Find customer Martin and show their addresses."
+- "Create an order for Mrs Martin: 2 vanilla candles, bank wire payment."
 
 ## Analysis
 

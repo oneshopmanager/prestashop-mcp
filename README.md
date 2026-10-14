@@ -20,7 +20,7 @@ This repository contains documentation only. The One Shop Manager software is co
 Answers come from the local copy of the store, without querying the live site for every question.
 
 - **Catalog**: products, texts in every language, categories, attributes and combinations
-- **Orders**: order list and details with gross margin
+- **Customers and orders**: customer search and details, order list and details with gross margin
 - **Analysis**: sales report, product sales and unsold products, stock valuation, restock, SEO audit, saved tables
 - **Accounting**: period summary with VAT by country and rate, invoices and credit slips to check, entries for one order
 - **Journal**: past operations and the status of AI proposals
@@ -30,14 +30,14 @@ Answers come from the local copy of the store, without querying the live site fo
 - Prices, field values and cell edits, texts and SEO fields, categories and category texts
 - Product creation and duplication (created disabled)
 - Attributes, attribute values and combinations, combination stock
-- Order status and tracking numbers
+- Order status, tracking numbers, new orders for an existing customer
 - Undoing a past operation
 
 The full list, with every tool and its type, is in [docs/tools.md](docs/tools.md).
 
 ## The approval rule
 
-Nothing is written to the store until the user opens the before/after preview and clicks Apply. Every `propose_*` tool computes the change and files it as a proposal in **AI assistant › AI log** inside the application; the AI has no tool that writes to the store. Applied changes can be undone from the journal.
+Nothing is written to the store until the user opens the before/after preview and clicks Apply. Every `propose_*` tool computes the change and files it as a proposal in **AI assistant › AI log** inside the application; the AI has no tool that writes to the store. Applied changes can be undone from the journal (except created orders).
 
 A **read-only** mode hides all proposal tools from the AI.
 

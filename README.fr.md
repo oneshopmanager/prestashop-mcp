@@ -20,7 +20,7 @@ Ce dépôt ne contient que de la documentation. Le logiciel One Shop Manager est
 Les réponses viennent de la copie locale de la boutique, sans requête sur le site en ligne à chaque question.
 
 - **Catalogue** : produits, textes dans chaque langue, catégories, attributs et déclinaisons
-- **Commandes** : liste et détail des commandes avec la marge brute
+- **Clients et commandes** : recherche et fiche client, liste et détail des commandes avec la marge brute
 - **Analyse** : rapport des ventes, ventes par produit et invendus, valorisation du stock, réassort, audit SEO, tableaux enregistrés
 - **Comptabilité** : synthèse d'une période avec la TVA par pays et par taux, factures et avoirs à vérifier, écritures d'une commande
 - **Journal** : opérations passées et statut des propositions de l'IA
@@ -30,14 +30,14 @@ Les réponses viennent de la copie locale de la boutique, sans requête sur le s
 - Prix, valeurs de champs et cellules, textes et SEO, catégories et leurs textes
 - Création et duplication de produits (créés désactivés)
 - Attributs, valeurs d'attribut et déclinaisons, stock des déclinaisons
-- Statut des commandes et numéros de suivi
+- Statut des commandes, numéros de suivi, nouvelle commande pour un client existant
 - Annulation d'une opération passée
 
 La liste complète, outil par outil, est dans [docs/tools.md](docs/tools.md).
 
 ## Le principe de validation
 
-Rien n'est écrit sur la boutique tant que l'utilisateur n'a pas ouvert l'aperçu avant/après et cliqué sur Appliquer. Chaque outil `propose_*` calcule le changement et le dépose comme proposition dans **Assistant IA › Journal IA** ; l'IA n'a aucun outil qui écrit sur la boutique. Tout s'annule depuis le journal.
+Rien n'est écrit sur la boutique tant que l'utilisateur n'a pas ouvert l'aperçu avant/après et cliqué sur Appliquer. Chaque outil `propose_*` calcule le changement et le dépose comme proposition dans **Assistant IA › Journal IA** ; l'IA n'a aucun outil qui écrit sur la boutique. Tout s'annule depuis le journal (sauf les commandes créées).
 
 Le mode **lecture seule** masque à l'IA tous les outils de proposition.
 

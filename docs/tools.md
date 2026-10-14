@@ -3,7 +3,7 @@
 Tools exposed by the `one-shop-manager` MCP server, version 0.4.55. Source of truth: `tools/list` on the server.
 
 - **Read**: returns data from the local copy of the store (a few tools read the store directly, as noted). Nothing is modified.
-- **Propose**: computes the change and files it as a proposal in the AI log of the application. **It writes nothing to the store.** The user opens the before/after preview and clicks Apply; applied changes can be undone from the journal.
+- **Propose**: computes the change and files it as a proposal in the AI log of the application. **It writes nothing to the store.** The user opens the before/after preview and clicks Apply; applied changes can be undone from the journal, except created orders.
 - **Local**: saves a table in the application on this computer, immediately. Nothing is sent to the store.
 
 Every `propose_*` tool takes a `reason` argument: why the change is suggested, shown to the user next to the proposal.
@@ -28,6 +28,13 @@ In **read-only** mode, the server hides every Propose tool, `save_table` and `li
 | `get_category_texts` | Category texts per language: description, meta tags, friendly URL | Read |
 | `list_attributes` | Combination attributes (size, color…) and their values, with usage count | Read |
 | `list_combinations` | Product combinations, read from the store: label, reference, EAN, price impact, final price, stock, default | Read |
+
+## Customers
+
+| Tool | What it does | Type |
+| --- | --- | --- |
+| `search_customers` | Search active customers by name, email or company (20 results at most) | Read |
+| `get_customer` | Customer details, read from the store: groups, addresses, orders, total spent, note | Read |
 
 ## Orders
 
@@ -100,6 +107,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table` and `li
 | --- | --- | --- |
 | `propose_order_state` | Change the status of orders, with or without the status email to the customer | Propose |
 | `propose_order_tracking` | Tracking numbers, one line per order, optionally with a shipped status | Propose |
+| `propose_order_create` | New order for an existing customer; PrestaShop builds the cart and computes prices, discounts, shipping and taxes. A created order cannot be undone from the journal | Propose |
 
 ## Not available to the AI yet
 
