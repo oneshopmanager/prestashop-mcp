@@ -1,0 +1,19 @@
+# Publishes server.json to the official MCP Registry. GitHub Actions OIDC grants io.github.oneshopmanager/*
+# (interactive GitHub login only grants personal namespaces: modelcontextprotocol/registry#1649).
+name: Publish to MCP Registry
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mcp-publisher
+        run: curl -fsSL https://github.com/modelcontextprotocol/registry/releases/download/v1.8.1/mcp-publisher_linux_amd64.tar.gz | tar xz mcp-publisher
+      - run: ./mcp-publisher login github-oidc
+      - run: ./mcp-publisher publish
