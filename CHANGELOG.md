@@ -5,6 +5,7 @@ Changes to the MCP server of One Shop Manager. The server version is the applica
 ## Unreleased
 
 - New tool `propose_product_categories` (proposal): add products to categories, remove them, or move them (replace), and change their default category.
+- `propose_cell_edits`: new `position` column, with an optional `category`, to change the order of products in a category (same as drag and drop in the grid). `search_products` with `category` and `sort: position` returns the current order.
 
 ## 0.4.60 — 2026-10-14
 

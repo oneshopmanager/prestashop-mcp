@@ -77,7 +77,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table` and `li
 
 | Tool | What it does | Type |
 | --- | --- | --- |
-| `propose_cell_edits` | Exact values product by product: price excl./incl. tax, cost price, stock, EAN, reference, active, name | Propose |
+| `propose_cell_edits` | Exact values product by product: price excl./incl. tax, cost price, stock, EAN, reference, active, name, order of products in a category (position) | Propose |
 | `propose_price_change` | Price change on several products: percentage, amount or fixed price, rounding, minimum margin; warns below cost, blocks zero prices | Propose |
 | `propose_field_change` | Enable or disable, set or adjust stock, or set a field value on several products | Propose |
 | `propose_product_categories` | Categories of several products: add, remove, replace (move), new default category | Propose |
