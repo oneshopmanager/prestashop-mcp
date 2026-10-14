@@ -99,6 +99,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | Tool | What it does | Type |
 | --- | --- | --- |
 | `propose_attribute_group` | New attribute (Material, Shoe size…), color or not | Propose |
+| `propose_attribute_edit` | Rename, reorder or move attribute values to another attribute, merge a value into another (combinations rewritten, clashes refused), rename or reorder attributes, delete unused values or attributes | Propose |
 | `propose_attribute_values` | New values for an attribute; existing values are skipped | Propose |
 | `propose_combinations_create` | Add combinations to an existing product | Propose |
 | `propose_combination_stock` | Set or adjust stock for all or some combinations of one or more products | Propose |
