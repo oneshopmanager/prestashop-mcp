@@ -2,7 +2,7 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
-## Unreleased
+## 0.4.58 — 2026-10-14
 
 - ChatGPT desktop app and Codex: **Connect ChatGPT and Codex** button in the application. It installs a local plugin for the ChatGPT desktop app and the server entry in `~/.codex/config.toml`, with the access key.
 - `get_product`, `get_product_texts`: the product can be given by its reference, EAN or name instead of its id (several matches: the list of candidates is returned).
