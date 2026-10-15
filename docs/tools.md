@@ -2,6 +2,8 @@
 
 Tools exposed by the `one-shop-manager` MCP server, version 0.4.56. Source of truth: `tools/list` on the server.
 
+Every list tool is paginated: it returns `total`, and `nextOffset` while more rows remain; pass it back as `offset` to read the next page.
+
 - **Read**: returns data from the local copy of the store (a few tools read the store directly, as noted). Nothing is modified.
 - **Propose**: computes the change and files it as a proposal in the AI log of the application. **It writes nothing to the store.** The user opens the before/after preview and clicks Apply; applied changes can be undone from the journal, except created orders.
 - **Local**: saves a table in the application on this computer, immediately. Nothing is sent to the store.
@@ -35,14 +37,14 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 
 | Tool | What it does | Type |
 | --- | --- | --- |
-| `search_customers` | Search active customers by name, email or company (20 results at most; empty: the 6 latest buyers), with company, order count, total spent and last order | Read |
+| `search_customers` | Search active customers by name, email or company (empty: the 6 latest buyers), with company, order count, total spent and last order | Read |
 | `get_customer` | Customer details, read from the store: groups, addresses, orders, total spent, note | Read |
 
 ## Orders
 
 | Tool | What it does | Type |
 | --- | --- | --- |
-| `list_orders` | Orders, most recent first, filtered by status, dates or search; returns the list of order statuses and carriers | Read |
+| `list_orders` | Orders, most recent first, filtered by status, dates or search; returns the list of order statuses and carriers; pagination | Read |
 | `get_order` | Order details: customer, status, carrier, payment, country, totals, lines with cost price at the time of sale, gross margin | Read |
 
 ## Analysis
@@ -50,10 +52,10 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | Tool | What it does | Type |
 | --- | --- | --- |
 | `sales_report` | Sales for a period (paid, not cancelled orders): revenue, orders and customers, by day, payment method, country, carrier and status, top customers, gross margin | Read |
-| `product_sales` | Best sellers over the last N days, or active products that did not sell, sorted by stock value tied up | Read |
+| `product_sales` | Best sellers over the last N days, or active products that did not sell, sorted by stock value tied up; pagination | Read |
 | `stock_report` | Stock valuation at cost and at selling price, units, out-of-stock items, products without cost price, by default category | Read |
-| `restock` | Products and combinations to reorder, from sales of the last N days and current stock | Read |
-| `seo_report` | SEO audit: score 0–100, issues by severity and type, affected pages | Read |
+| `restock` | Products and combinations to reorder, from sales of the last N days and current stock; pagination | Read |
+| `seo_report` | SEO audit: score 0–100, issues by severity and type, affected pages (paginated) | Read |
 | `list_tables` | Tables saved in My tables | Read |
 | `run_table` | Computes a saved table on local data, with pagination | Read |
 | `table_format` | Format of a table definition, read before `save_table` | Read |
@@ -64,7 +66,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | Tool | What it does | Type |
 | --- | --- | --- |
 | `accounting_summary` | Period summary with the chart of accounts set in the application: journal totals and balance, VAT by country and rate, items to check | Read |
-| `accounting_documents` | Invoices or credit slips of a period, with the reasons to check each document | Read |
+| `accounting_documents` | Invoices or credit slips of a period, with the reasons to check each document; pagination | Read |
 | `get_accounting_plan` | The chart of accounts set in the application, as CSV (`type;pays;critere;compte`): journals, accounts by VAT rate and country, payment methods, custom account labels | Read |
 | `set_accounting_plan` | Changes the chart of accounts or account labels (same CSV, partial). Saved at once on this computer; returns the previous chart. Nothing is sent to the store | Local |
 | `accounting_order` | Accounting for one order: sales and payment entries, anomalies (unbalanced, VAT, country), invoices and credit slips | Read |
@@ -73,8 +75,8 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 
 | Tool | What it does | Type |
 | --- | --- | --- |
-| `list_journal` | Latest operations executed on the store | Read |
-| `list_proposals` | Recent proposals and their status: pending, validated, rejected (with the user's note), expired after 7 days | Read |
+| `list_journal` | Operations executed on the store, most recent first; pagination | Read |
+| `list_proposals` | Recent proposals and their status: pending, validated, rejected (with the user's note), expired after 7 days; pagination | Read |
 | `mcp_suggest` | Reports a request the tools cannot handle to the publisher, described generically, to add it in a next version | Report |
 | `propose_undo` | Undo an operation from the journal | Propose |
 

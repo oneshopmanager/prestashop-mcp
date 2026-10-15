@@ -2,6 +2,11 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
+## Unreleased
+
+- Pagination on every list tool: `search_customers`, `product_sales`, `restock`, `seo_report`, `accounting_documents`, `list_journal` and `list_proposals` take `offset` and return `total` and `nextOffset` (absent on the last page), like `list_orders`, `search_products` and `run_table`. `search_customers` is no longer capped at 20 results; `list_journal` and `list_proposals` now return an object (`operations`, `proposals`).
+- AI journal: a pending proposal shows all its changes (500 at a time, "Show the next"), no longer only the first 500, so each one can be checked or left out.
+
 ## 0.4.66 — 2026-10-15
 
 - New tool `propose_product_delete` (proposal): permanent deletion of products, by ids or exact references (module 0.44.0). Irreversible: the AI journal shows a red warning, asks the user to type a confirmation word, and never sends a deletion with "Validate all". A reference that is not found or shared by several products blocks the whole proposal.
