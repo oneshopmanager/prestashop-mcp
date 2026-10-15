@@ -2,7 +2,7 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
-## Unreleased
+## 0.4.64 — 2026-10-15
 
 - New tool `mcp_suggest`: when a request is not possible with the tools, the AI reports it to the publisher (generic description, sent with the anonymous usage statistics if they are on), to add it in a next version.
 
