@@ -88,7 +88,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | `propose_price_change` | Price change on several products: percentage, amount or fixed price, rounding, minimum margin; warns below cost, blocks zero prices | Propose |
 | `propose_field_change` | Enable or disable, set or adjust stock, or set a field value on several products | Propose |
 | `propose_product_categories` | Categories of several products: add, remove, replace (move), new default category | Propose |
-| `propose_texts` | Texts on several products, per language: template with variables, or search and replace | Propose |
+| `propose_texts` | Texts on one or several products, per language: name, short and long description, meta title and description, friendly URL; template with variables (a single product with a plain text sets that exact text), or search and replace | Propose |
 | `propose_product_create` | New product, created disabled: texts per language, photos from URLs, categories, brand, combinations | Propose |
 | `propose_product_duplicate` | Duplicate products like the back office does: copies disabled, stock at 0 | Propose |
 
