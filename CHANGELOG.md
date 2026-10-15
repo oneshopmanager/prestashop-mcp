@@ -2,7 +2,7 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
-## Unreleased
+## 0.4.68 — 2026-10-15
 
 - New tool `propose_customer_active` (proposal): deactivate or reactivate customer accounts (module 0.46.0), can be undone from the journal.
 - `search_customers`: filters on account status, guest, registration date, order count, last order, last visit and visits over 12 months; results give the registration date, account status, last visit and visit count. Visits come from PrestaShop statistics (connections table), empty when statistics are off on the store. `search` is no longer required.
