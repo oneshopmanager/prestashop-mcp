@@ -37,7 +37,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 
 | Tool | What it does | Type |
 | --- | --- | --- |
-| `search_customers` | Search active customers by name, email or company (empty: the 6 latest buyers), with company, order count, total spent and last order | Read |
+| `search_customers` | Search customers by name, email or company, or with filters: account active, registration date, order count, last order, last visit and visits over 12 months (PrestaShop statistics). Returns company, order count, total spent, last order and last visit; pagination | Read |
 | `get_customer` | Customer details, read from the store: groups, addresses, orders, total spent, note | Read |
 
 ## Orders
@@ -121,6 +121,12 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | `propose_order_state` | Change the status of orders, with or without the status email to the customer | Propose |
 | `propose_order_tracking` | Tracking numbers, one line per order, optionally with a shipped status | Propose |
 | `propose_order_create` | New order for an existing customer; PrestaShop builds the cart and computes prices, discounts, shipping and taxes. A created order cannot be undone from the journal | Propose |
+
+## Customer proposals
+
+| Tool | What it does | Type |
+| --- | --- | --- |
+| `propose_customer_active` | Deactivate or reactivate customer accounts (module 0.46.0). A deactivated account can no longer log in; its orders stay. Can be undone from the journal | Propose |
 
 ## Not available to the AI yet
 
