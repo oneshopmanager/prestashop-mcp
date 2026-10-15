@@ -2,7 +2,7 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
-## Unreleased
+## 0.4.66 — 2026-10-15
 
 - New tool `propose_product_delete` (proposal): permanent deletion of products, by ids or exact references (module 0.44.0). Irreversible: the AI journal shows a red warning, asks the user to type a confirmation word, and never sends a deletion with "Validate all". A reference that is not found or shared by several products blocks the whole proposal.
 - `propose_texts`: the long description (`description`, HTML) can now be changed, besides the short one. One product with a plain text (no variable) sets that exact text, for a description written for that product.
