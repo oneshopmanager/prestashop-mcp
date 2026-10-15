@@ -2,7 +2,7 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
-## Unreleased
+## 0.4.67 — 2026-10-15
 
 - Pagination on every list tool: `search_customers`, `product_sales`, `restock`, `seo_report`, `accounting_documents`, `list_journal` and `list_proposals` take `offset` and return `total` and `nextOffset` (absent on the last page), like `list_orders`, `search_products` and `run_table`. `search_customers` is no longer capped at 20 results; `list_journal` and `list_proposals` now return an object (`operations`, `proposals`).
 - AI journal: a pending proposal shows all its changes (500 at a time, "Show the next"), no longer only the first 500, so each one can be checked or left out.
