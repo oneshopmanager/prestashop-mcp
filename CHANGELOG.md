@@ -2,6 +2,10 @@
 
 Changes to the MCP server of One Shop Manager. The server version is the application version. The full list of tools is in [docs/tools.md](docs/tools.md).
 
+## Unreleased
+
+- New tool `mcp_suggest`: when a request is not possible with the tools, the AI reports it to the publisher (generic description, sent with the anonymous usage statistics if they are on), to add it in a next version.
+
 ## 0.4.63 — 2026-10-14
 
 - New tool `propose_attribute_edit` (proposal): rename, reorder, move or merge attribute values, rename or reorder attributes, delete unused values or attributes.

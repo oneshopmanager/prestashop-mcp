@@ -75,6 +75,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | --- | --- | --- |
 | `list_journal` | Latest operations executed on the store | Read |
 | `list_proposals` | Recent proposals and their status: pending, validated, rejected (with the user's note), expired after 7 days | Read |
+| `mcp_suggest` | Reports a request the tools cannot handle to the publisher, described generically, to add it in a next version | Report |
 | `propose_undo` | Undo an operation from the journal | Propose |
 
 ## Product proposals
@@ -119,5 +120,7 @@ In **read-only** mode, the server hides every Propose tool, `save_table`, `set_a
 | `propose_order_create` | New order for an existing customer; PrestaShop builds the cart and computes prices, discounts, shipping and taxes. A created order cannot be undone from the journal | Propose |
 
 ## Not available to the AI yet
+
+When a request needs something the tools do not offer, the AI calls `mcp_suggest`: a one-sentence, generic description (no product, customer, price or URL) is sent to the publisher with the anonymous usage statistics, unless they are turned off in Settings.
 
 Creating or editing customers; vouchers (cart rules); photos of an existing product; suppliers, SEO redirects and image captions. These are done in the application.
